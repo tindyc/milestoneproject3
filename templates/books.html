@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoBooks</title>
+</head>
+<body>
+    {% for book in books %}
+        {{ book.book_title }}<br>
+        {{ book.category_name }}<br>
+        {{ book.description }}<br>
+        {{ book.author }}<br>
+        {{ book.published }}<br>
+    {% endfor %}
+</body>
+</html>
