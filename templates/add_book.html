@@ -7,6 +7,18 @@
     <form class="col s12" method="POST" action="">
         <div class="row">
             <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Task Category</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                 <input id="book_title" name="book_title" minlength="5" maxlength="50" type="text" class="validate"
                     required>
@@ -16,26 +28,25 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                <textarea id="description" name="description" minlength="5" maxlength="200"
-                    class="materialize-textarea validate" required></textarea>
-                <label for="description">Book Description</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                <textarea id="author" name="author" minlength="5" maxlength="200"
-                    class="materialize-textarea validate" required></textarea>
+                <textarea id="author" name="author" minlength="5" maxlength="200" class="materialize-textarea validate"
+                    required></textarea>
                 <label for="author">Author</label>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                <input id="published" name="published" type="text" class="datepicker validate" required>
-                <label for="published">Publication Date</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <textarea id="description" name="description" minlength="5" maxlength="200"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="description">Book Description</label>
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="published" name="published" type="text" class="datepicker validate" required>
+                    <label for="published">Publication Date</label>
+                </div>
+            </div>
     </form>
 </div>
 
