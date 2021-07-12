@@ -1,31 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-{% for book in books %}
-{{ book.book_title }}<br>
-{{ book.category_name }}<br>
-{{ book.description }}<br>
-{{ book.author }}<br>
-{{ book.published }}<br>
-{% endfor %}
-
 <ul class="collapsible">
+    {% for book in books %}
     <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow"><i
-                class="fas fa-caret-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ book.book_title }}</strong> : {{ book.author }}
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ book.cateogry_name }}</strong> <br>
+            <strong>{{ book.published }}</strong>
+            <p>{{ book.description }}</p>
+        </div>
     </li>
-    <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow"><i
-                class="fas fa-caret-down"></i>Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow"><i
-                class="fas fa-caret-down"></i>Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
 </ul>
 
 {% endblock %}
