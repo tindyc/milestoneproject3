@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="light-blue-text text-darken-4 center-align">All Books</h3>
+
 <ul class="collapsible">
     {% for book in books %}
     <li>
@@ -12,6 +14,7 @@
             <strong>{{ book.cateogry_name }}</strong> <br>
             <strong>{{ book.published }}</strong>
             <p>{{ book.description }}</p>
+            <p><em>by: {{ book.created_by }}</em></p>
         </div>
     </li>
     {% endfor %}
