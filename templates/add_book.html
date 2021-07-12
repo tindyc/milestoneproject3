@@ -3,18 +3,37 @@
 
 <h3 class="light-blue-text text-darken-4 center-align">Add Book</h3>
 
-<div class="row">
+<div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="">
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-user-circle prefix light-blue-text text-darken-4"></i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">First Name</label>
+                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                <input id="book_title" name="book_title" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="book_title">Book Title</label>
             </div>
+        </div>
+        <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-phone prefix light-blue-text text-darken-4"></i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Telephone</label>
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="description" name="description" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="description">Book Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="author" name="author" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="author">Author</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                <input id="published" name="published" type="text" class="datepicker validate" required>
+                <label for="published">Publication Date</label>
             </div>
         </div>
     </form>
